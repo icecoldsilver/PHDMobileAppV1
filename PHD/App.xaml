@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+             mc:Ignorable="d" x:Class="PHD.App">
+    <Application.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfTextInputLayoutTheme">CustomTheme</x:String>
+                <Color x:Key="SyncPrimaryLightColor">White</Color>
+                <Color x:Key="SyncPrimaryColor">Orange</Color>
+                <Color x:Key="SfTextInputLayoutFloatedHintUnfocusedColor">White</Color>
+                <Color x:Key="SfTextInputLayoutHintColor">White</Color>
+                <Color x:Key="SfTextInputLayoutLineColor">White</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+    </Application.Resources>
+</Application>

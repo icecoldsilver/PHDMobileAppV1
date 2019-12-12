@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:markupextensions="clr-namespace:FenTrue.MarkupExtensions"
+             x:Class="PHD.Views.LoginPage">
+    <Grid>
+        <Image Source="{markupextensions:EmbeddedImage ResourceId = PHD.Images.LoginGradientBG.png}"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               Aspect="AspectFill"/>
+        <StackLayout>
+
+            <Grid>
+                <StackLayout Grid.Row="0"
+                             Grid.ColumnSpan="3">
+                <Label Text="Login"
+                       TextColor="White"
+                       FontSize="25"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Login or sign up for free!"
+                       TextColor="White"
+                       FontSize="15"
+                       HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1"
+                             HorizontalOptions="CenterAndExpand"
+                             Spacing="1"
+                             Padding="0"
+                             VerticalOptions="Center"
+                             Grid.ColumnSpan="3">
+                    <inputLayout:SfTextInputLayout
+                    Hint="Email"
+                    Padding="5"
+                    Margin="0,0,0,0"
+                    InputViewPadding="10"
+                    ContainerType="Outlined"
+                    EnableHintAnimation="True"
+                    OutlineCornerRadius="10">
+                    <Entry TextColor="White"  />
+                </inputLayout:SfTextInputLayout>
+                <inputLayout:SfTextInputLayout
+                    
+                    Hint="Password"
+                    Padding="5"
+                    Margin="0"
+                    InputViewPadding="10"
+                    ContainerType="Outlined"
+                    EnableHintAnimation="True"
+                    OutlineCornerRadius="10">
+                    <Entry TextColor="White" IsPassword="True"/>
+                </inputLayout:SfTextInputLayout>
+                     <Button
+                       Margin="0,0,0,15"
+                       FontSize="10"
+                       Padding="0,0,10,0"
+                       Clicked="Handle_ForgotPassword_Clicked"
+                       VerticalOptions="StartAndExpand"
+                       TranslationY="-25"
+                       HorizontalOptions="End"
+                       CharacterSpacing="1"
+                       Text="FORGOT PASSWORD?"
+                       TextColor="White"/>
+
+                </StackLayout>
+               
+
+                <StackLayout Grid.Row="2"
+                             Grid.ColumnSpan="3"
+                             HorizontalOptions="CenterAndExpand">
+                    <Button Text="LOGIN"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            Clicked="Handle_Login_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            CornerRadius="20"
+                            BackgroundColor="OrangeRed"/>
+                <Label Text="Or create account using social media"
+                       TextColor="White"
+                       Padding="15"/>
+                <Button 
+                        ImageSource="{markupextensions:EmbeddedImage ResourceId=PHD.Assets.icons8-facebook-50.png}"
+                        CornerRadius="20"
+                        Text="Facebook"
+                        FontAttributes="Bold"
+                        TextColor="Blue"
+                        BackgroundColor="White"/>
+                </StackLayout>
+            
+            
+            
+            </Grid>
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="EndAndExpand"
+                         HorizontalOptions="CenterAndExpand"
+                         Margin="0,0,0,15"
+                         Padding="10"
+                         Spacing="5">
+                <Label VerticalTextAlignment="Center"
+                        Text="Don't have an account?"
+                       TextColor="White"/>
+                <Button Text="Sign Up" TextColor="Orange"/>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>
